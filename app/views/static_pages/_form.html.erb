@@ -1,5 +1,5 @@
-<%= form_with do |f| %>
-    <%= f.label :id, "Search Flickr Id"%>
-    <%= f.text_field :id %>
+<%= form_with url: root_path,  method: :get do |f| %>
+    <%= f.label :user_id, "Search Flickr Id"%>
+    <%= f.text_field :user_id %>
     <%= f.submit "Search" %>
 <% end %>
