@@ -3,9 +3,12 @@
         <% @photos.each do |p| %>
         <%= image_tag "#{Flickr.url_m(p)}" %>
         <% end %>
-    <% elsif @photos.nil? %>
-        <p>No photos found yet! </p>
     <% else %>
-        <p>Something went wrong!</p>
+        <p>No Photos here!</p>
+    <% end %>
+    <% flash.each do |type, msg| %>
+        <div>
+        <%= msg %>
+        </div>
     <% end %>
 </div>
